@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  flaskdeployedapp:
+    image: flaskdeployedapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: 0.1
+      limits:
+        memory: "1024Mi"
+        cpu: 1.0v
